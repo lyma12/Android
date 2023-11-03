@@ -3,6 +3,7 @@ package com.example.android
 import android.os.Bundle
 import android.widget.ListView
 import androidx.activity.ComponentActivity
+import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : ComponentActivity() {
 
@@ -31,8 +32,9 @@ class MainActivity : ComponentActivity() {
         list.add(Message("Ram Dang", "Chai lieu hdh", "8:00 AM"))
 
 
-        val listView = findViewById<ListView>(R.id.listView)
-        listView.adapter = Adapter(list)
+        val customAdater: Adapter = Adapter(list)
+        val listView: RecyclerView = findViewById<RecyclerView>(R.id.recyclerView)
+        listView.adapter = customAdater
     }
 }
 
