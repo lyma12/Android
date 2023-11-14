@@ -23,6 +23,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ContactDetail"
+            android:exported="true"
+            android:label="contact_detail"
+            android:theme="@style/Theme.Android" />
     </application>
 
 </manifest>
