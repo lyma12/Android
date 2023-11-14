@@ -30,6 +30,7 @@
         android:paddingRight="10dp"
         android:text="TextView"
         android:textAlignment="textStart"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        tools:ignore="HardcodedText,InefficientWeight,RtlHardcoded" />
 
 </LinearLayout>

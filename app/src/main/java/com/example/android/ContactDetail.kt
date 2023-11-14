@@ -3,16 +3,16 @@ package com.example.android
 import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
+import androidx.activity.ComponentActivity
+
 import androidx.appcompat.widget.Toolbar
 
-class ContactDetail: AppCompatActivity() {
+class ContactDetail: ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.detail)
         val toolBar: Toolbar = findViewById(R.id.toolbar)
-        setSupportActionBar(toolBar)
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        
         toolBar?.setNavigationOnClickListener {
             onBackPressed()
         }
