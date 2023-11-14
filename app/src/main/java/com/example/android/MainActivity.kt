@@ -1,21 +1,29 @@
 package com.example.android
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.util.Log
+import android.view.ContextMenu
+import android.view.MenuItem
+import android.view.View
+import android.widget.AdapterView
+import android.widget.PopupMenu
 import androidx.activity.ComponentActivity
 
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : ComponentActivity() {
-
+    var listData: ArrayList<Contact> = ArrayList<Contact>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.list_view)
 
-        var list : ArrayList<Contact> = dataList()
+        var list: ArrayList<Contact> = dataList()
+        listData = list
 
-        val myAdapter: ContactAdapter = ContactAdapter(list)
+        val myAdapter: ContactAdapter = ContactAdapter(list, this)
 
         var recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.adapter = myAdapter
@@ -43,7 +51,10 @@ class MainActivity : ComponentActivity() {
         })
 
 
+
+
     }
+
 
     fun dataList() : ArrayList<Contact>{
         var list: ArrayList<Contact> = ArrayList<Contact>()
@@ -61,5 +72,6 @@ class MainActivity : ComponentActivity() {
         list.add(Contact("Lam Anh", "0023401", "5423@gmail.com", "0923679063"))
         return list
     }
+
 }
 

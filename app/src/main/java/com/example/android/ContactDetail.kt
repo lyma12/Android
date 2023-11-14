@@ -12,7 +12,7 @@ class ContactDetail: ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.detail)
         val toolBar: Toolbar = findViewById(R.id.toolbar)
-        
+
         toolBar?.setNavigationOnClickListener {
             onBackPressed()
         }

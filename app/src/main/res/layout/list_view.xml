@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="10"
-        android:background="#DB4236"
+        android:background="#320864"
         android:orientation="horizontal">
 
         <ImageButton
@@ -20,7 +20,7 @@
             android:layout_height="match_parent"
             android:layout_margin="5dp"
             android:layout_weight="0"
-            android:background="#DB4236"
+            android:background="#320864"
             android:minWidth="64dp"
             android:src="@android:drawable/ic_menu_sort_by_size"
             tools:ignore="ContentDescription,NestedWeights,SpeakableTextPresentCheck,TouchTargetSizeCheck,ImageContrastCheck"
@@ -43,7 +43,7 @@
             android:layout_height="match_parent"
             android:layout_margin="5dp"
             android:layout_weight="0"
-            android:background="#DB4236"
+            android:background="#320864"
             android:minWidth="64dp"
             android:src="@android:drawable/ic_menu_search"
             tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck,ImageContrastCheck" />
