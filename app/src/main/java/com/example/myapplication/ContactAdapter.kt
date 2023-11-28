@@ -1,4 +1,4 @@
-package com.example.android
+package com.example.myapplication
 
 import android.content.Context
 import android.content.Intent
@@ -9,10 +9,9 @@ import android.view.View.OnLongClickListener
 import android.view.ViewGroup
 import android.widget.PopupMenu
 import android.widget.TextView
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 
-class ContactAdapter(val list: ArrayList<Contact>, val context: Context): RecyclerView.Adapter<ContactAdapter.ViewHolder>() {
+class ContactAdapter(val list: ArrayList<Contacts>, val context: Context): RecyclerView.Adapter<ContactAdapter.ViewHolder>() {
     private var onClickListener: OnClickListener? = null
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view), OnLongClickListener{
@@ -65,7 +64,7 @@ class ContactAdapter(val list: ArrayList<Contact>, val context: Context): Recycl
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_view, parent, false)
+            .inflate(R.layout.item, parent, false)
 
         return ViewHolder(view)
     }
@@ -92,7 +91,7 @@ class ContactAdapter(val list: ArrayList<Contact>, val context: Context): Recycl
 
     // onClickListener Interface
     interface OnClickListener {
-        fun onClick(position: Int, model: Contact)
+        fun onClick(position: Int, model: Contacts)
     }
 
 
